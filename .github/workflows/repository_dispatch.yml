@@ -14,8 +14,8 @@ jobs:
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+            -H "Authorization: token ${{ secrets.PAT_TOKEN_GITDRAPE  }}" \
             --data '{"event_type": "submodule-update"}' \
             https://api.github.com/repos/manishraj27/Gitdrape/dispatches
         env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN_GITDRAPE  }}
